@@ -26,13 +26,13 @@ jobs:
         name: aggs-matrix-stats-test-reports
         path: test-reports/aggs-matrix-stats
     
-    - name: Test module ingest-goip
-      run: gradle :modules:ingest-goip:test
-    - name: Save module ingest-goip test reports
+    - name: Test module ingest-geoip
+      run: gradle :modules:ingest-geoip:test
+    - name: Save module ingest-geoip test reports
       uses: actions/upload-artifact@v1
       with:
-        name: ingest-goip-test-reports
-        path: test-reports/ingest-goip
+        name: ingest-geoip-test-reports
+        path: test-reports/ingest-geoip
         
         
     - name: Test module ingest-user-agent
