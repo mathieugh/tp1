@@ -24,7 +24,7 @@ jobs:
       uses: actions/upload-artifact@v1
       with:
         name: aggs-matrix-stats-test-reports
-        path: test-reports/aggs-matrix-stats
+        path: modules/aggs-matrix-stats/build/reports/tests/test
     
     - name: Test module ingest-geoip
       run: gradle :modules:ingest-geoip:test
@@ -32,7 +32,7 @@ jobs:
       uses: actions/upload-artifact@v1
       with:
         name: ingest-geoip-test-reports
-        path: test-reports/ingest-geoip
+        path: modules/ingest-geoip/build/reports/tests/test
         
         
     - name: Test module ingest-user-agent
@@ -41,7 +41,7 @@ jobs:
       uses: actions/upload-artifact@v1
       with:
         name: ingest-user-agent-test-reports
-        path: test-reports/ingest-user-agent
+        path: modules/ingest-user-agent/build/reports/tests/test
         
     - name: Test module repository-url
       run: gradle :modules:repository-url:test
@@ -49,4 +49,12 @@ jobs:
       uses: actions/upload-artifact@v1
       with:
         name: repository-url-test-reports
-        path: test-reports/repository-url
+        path: modules/repository-url/build/reports/tests/test
+        
+    - name: Test module systemd
+      run: gradle :modules:systemd:test
+    - name: Save module systemd test reports
+      uses: actions/upload-artifact@v1
+      with:
+        name: systemd-test-reports
+        path: modules/systemd/build/reports/tests/test
