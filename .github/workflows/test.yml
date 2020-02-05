@@ -21,7 +21,7 @@ jobs:
     - name: Test module aggs-matrix-stats
       run: gradle :modules:aggs-matrix-stats:test
     - name: Save module aggs-matrix-stats test reports
-      uses: actions/upload-artifacts@v1
+      uses: actions/upload-artifact@v1
       with:
         name: aggs-matrix-stats-test-reports
         path: test-reports/aggs-matrix-stats
@@ -29,7 +29,7 @@ jobs:
     - name: Test module ingest-goip
       run: gradle :modules:ingest-goip:test
     - name: Save module ingest-goip test reports
-      uses: actions/upload-artifacts@v1
+      uses: actions/upload-artifact@v1
       with:
         name: ingest-goip-test-reports
         path: test-reports/ingest-goip
@@ -38,7 +38,7 @@ jobs:
     - name: Test module ingest-user-agent
       run: gradle :modules:ingest-user-agent:test
     - name: Save module ingest-user-agent test reports
-      uses: actions/upload-artifacts@v1
+      uses: actions/upload-artifact@v1
       with:
         name: ingest-user-agent-test-reports
         path: test-reports/ingest-user-agent
@@ -46,7 +46,7 @@ jobs:
     - name: Test module repository-url
       run: gradle :modules:repository-url:test
     - name: Save module repository-url test reports
-      uses: actions/upload-artifacts@v1
+      uses: actions/upload-artifact@v1
       with:
         name: repository-url-test-reports
         path: test-reports/repository-url
