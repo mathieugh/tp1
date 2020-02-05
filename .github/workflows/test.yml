@@ -50,3 +50,11 @@ jobs:
       with:
         name: repository-url-test-reports
         path: modules/repository-url/build/reports/tests/test
+        
+    - name: Test module systemd
+      run: gradle :modules:systemd:test
+    - name: Save module systemd test reports
+      uses: actions/upload-artifact@v1
+      with:
+        name: systemd-test-reports
+        path: modules/systemd/build/reports/tests/test
