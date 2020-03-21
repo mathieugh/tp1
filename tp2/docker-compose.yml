@@ -1,7 +1,9 @@
 version: '2.2'
 services:
   elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:6.8.6
+    # Roule le dockerfile
+    build: .
+    
     # container_name: elasticsearch
     environment:
       - cluster.name=docker-cluster
@@ -14,9 +16,10 @@ services:
     # volumes:
     #   - esdata1:/usr/share/elasticsearch/data
     ports:
-      - 9200
+      - "9200:9200"
     networks:
-      - esnet
+      - esnet    
+  
 # CATALINA_OPTS: '-agentpath:/usr/local/jprofiler10.0.4/bin/linux-x64/libjprofilerti.so=port=8849'
   # elasticsearch2:
   #   image: docker.elastic.co/elasticsearch/elasticsearch:6.8.6

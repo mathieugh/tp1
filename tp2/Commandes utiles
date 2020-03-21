@@ -1,0 +1,8 @@
+Commandes utiles
+
+docker ps => Montre les containers actifs
+	=> docker container ls est equivalent
+
+docker inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}" container_name => Avoir l'IP sur laquelle roule le container
+
+docker container exec -it container_name /bin/bash => Cree une session bash dans le container
